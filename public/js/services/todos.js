@@ -7,6 +7,9 @@ angular.module('todoService', [])
 			get : function() {
 				return $http.get('/api/food');
 			},
+			getTotal : function() {
+				return $http.get('/api/total');
+			},
 			create : function(todoData) {
 				return $http.post('/api/food', todoData);
 			},

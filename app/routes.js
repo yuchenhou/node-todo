@@ -13,6 +13,19 @@ function getTodos(res) {
 }
 ;
 
+function getTotal(res) {
+    Todo.find(function (err, todos) {
+        if (err) {
+            res.send(err);
+        }
+        var total = 0;
+        for (var i = 0; i < todos.length; i += 1) {
+            total += todos[i].price;
+        }
+        res.json(total); // return total
+        //console.log(total);
+    });
+};
 module.exports = function (app) {
 
     // api ---------------------------------------------------------------------
@@ -20,6 +33,10 @@ module.exports = function (app) {
     app.get('/api/food', function (req, res) {
         // use mongoose to get all todos in the database
         getTodos(res);
+    });
+
+    app.get('/api/total', function (req, res) {
+        getTotal(res);
     });
 
     // create todo and send back all todos after creation

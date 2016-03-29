@@ -13,6 +13,11 @@ angular.module('todoController', [])
 				$scope.todos = data;
 				$scope.loading = false;
 			});
+		Todos.getTotal()
+			.success(function(data) {
+				$scope.total = data;
+				$scope.loading = false;
+			});
 
 		// CREATE ==================================================================
 		// when submitting the add form, send the text to the node API
@@ -33,6 +38,11 @@ angular.module('todoController', [])
 						$scope.todos = data; // assign our new list of todos
 					});
 			}
+			Todos.getTotal()
+				.success(function(data) {
+					$scope.total = data;
+					$scope.loading = false;
+				});
 		};
 
 		// DELETE ==================================================================
@@ -45,6 +55,11 @@ angular.module('todoController', [])
 				.success(function(data) {
 					$scope.loading = false;
 					$scope.todos = data; // assign our new list of todos
+				});
+			Todos.getTotal()
+				.success(function(data) {
+					$scope.total = data;
+					$scope.loading = false;
 				});
 		};
 	}]);
