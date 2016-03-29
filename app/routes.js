@@ -22,8 +22,7 @@ function getTotal(res) {
         for (var i = 0; i < todos.length; i += 1) {
             total += todos[i].price;
         }
-        res.json(total); // return total
-        //console.log(total);
+        res.json(Number(total*1.075.toFixed(2))); // return total
     });
 };
 module.exports = function (app) {
