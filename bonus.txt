@@ -20,7 +20,7 @@ feedback frequently!).
 
 If the app needs long-term development/maintenance, I will need to do some
 extra work to facilitate development: refactor the changes I made, add unit
-tests, add functional tests, set up CI server and set up auto deployment.
+tests, add functional tests, set up continuous integration and auto deployment.
 
 # why I need to do that
 
