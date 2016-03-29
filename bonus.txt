@@ -1,0 +1,27 @@
+# What I will do next
+
+I will do a demo to Emeril(let him try it out if possible), find out what else
+he wants the most(e.g. better performance, one more feature) and improve the
+app accordingly.
+2 of us can repeat the above process for a few iterations until we agree that
+we have spent a reasonable amount of time building a good enough app for the task.
+
+# Why I will do that
+
+I do that to most efficiently handle this ambiguous phase. Our goal is very
+clear: build this app for him to take orders in the food festival. But the
+requirements are very unclear. I don't know what he really wants(he probably
+doesn't know that either). Therefore, to avoid wasting time doing useless work,
+I should build this app incrementally: during each iteration, do a small change
+and get feedback immediately(he's my friend so he shouldn't mind providing
+feedback frequently!).
+
+# what I need to do only if there is long-term plan for the app
+
+If the app needs long-term development/maintenance, I will need to do some
+extra work to facilitate development: refactor the changes I made, add unit
+tests, add functional tests, set up CI server and set up auto deployment.
+
+# why I need to do that
+
+Because these cost me time in the short run and save me time in the long run.
