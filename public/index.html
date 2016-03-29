@@ -33,8 +33,9 @@
 
 		<!-- HEADER AND TODO COUNT -->
 		<div class="jumbotron text-center">
-			<h1>I'm a Food-aholic <span class="label label-info">{{ todos.length }}</span></h1>
-			<h1>{{ total }}</span></h1>
+			<h1>I'm a Food-aholic</h1>
+			<h1>Total number of items: <span class="label label-info">{{ todos.length }}</span></h1>
+			<h1>Total price of items: <span class="label label-info">{{ total }}</span></h1>
 		</div>
 
 		<!-- TODO LIST -->
@@ -42,11 +43,11 @@
 			<div class="col-sm-4 col-sm-offset-4">
 
 				
-
+				<p>item name: item price</p>
 				<!-- LOOP OVER THE TODOS IN $scope.todos -->
 				<div class="checkbox" ng-repeat="todo in todos">
 					<label>
-						<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }} {{todo.price}}
+						<input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}: {{todo.price}}
 					</label>
 				</div>
 
@@ -64,8 +65,8 @@
 					<div class="form-group">
 
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
-						<input type="text" class="form-control input-lg text-center" placeholder="food name" ng-model="formData.text">
-						<input type="number" class="form-control input-lg text-center" placeholder="food price" ng-model="formData.price">
+						<input type="text" class="form-control input-lg text-center" placeholder="item name" ng-model="formData.text">
+						<input type="number" class="form-control input-lg text-center" placeholder="item price" ng-model="formData.price">
 					</div>
 
 					<!-- createToDo() WILL CREATE NEW TODOS -->
@@ -75,7 +76,7 @@
 		</div>
 
 		<div class="text-center text-muted">
-			<p>A demo by <a href="http://scotch.io">Scotch</a>.</p>
+			<p>A demo by <a href="https://github.com/yuchenhou/node-todo">Yuchen</a>.</p>
 			<p>Read the <a href="http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular">tutorial</a>.</p>
 		</div>
 
